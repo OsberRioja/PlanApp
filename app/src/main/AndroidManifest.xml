@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PlanApp"
         tools:targetApi="31">
+        <activity android:name=".presentation.SimActivity"/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="API_KEY_AQUI" />
+
+
         <activity
             android:name=".presentation.HomeActivity"
             android:exported="true"

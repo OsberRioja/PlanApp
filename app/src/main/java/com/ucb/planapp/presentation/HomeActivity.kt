@@ -57,6 +57,9 @@ class HomeActivity : AppCompatActivity() {
         btnNext.setOnClickListener { flipper.showNext() }
         btnPrev.setOnClickListener { flipper.showPrevious() }
 
+        val intent = Intent(this, SimActivity::class.java)
+        startActivity(intent)
+
         val btnWhatsApp = findViewById<ImageButton>(R.id.btnWhatsApp)
         btnWhatsApp.setOnClickListener {
             // Texto a enviar
