@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="16dp"
+    android:layout_margin="8dp"
+    android:elevation="4dp"
+    android:gravity="center"
+    android:backgroundTint="#EFEFEF">
+
+    <TextView
+        android:id="@+id/planName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Plan FLEX 5"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/planPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$199 /mes"
+        android:textSize="18sp"
+        android:textColor="#FF0000"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/planData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5GB"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:id="@+id/planFeatures"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="✓ Llamadas ilimitadas\n✓ Hotspot\n✓ Redes sociales\n✓ CO2 Negativo"
+        android:layout_marginTop="12dp"
+        android:textSize="14sp"/>
+</LinearLayout>

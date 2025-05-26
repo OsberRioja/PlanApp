@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app   ="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp">
@@ -16,15 +17,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <include layout="@layout/view_plan_card"
-            android:padding="8dp"
-            android:tag="5GB"/>
-        <include layout="@layout/view_plan_card"
-            android:padding="8dp"
-            android:tag="8GB"/>
-        <include layout="@layout/view_plan_card"
-            android:padding="8dp"
-            android:tag="10GB"/>
+        <include
+            android:id="@+id/plan0"
+            layout="@layout/view_plan_card"
+            android:tag="0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include
+            android:id="@+id/plan1"
+            layout="@layout/view_plan_card"
+            android:tag="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include
+            android:id="@+id/plan2"
+            layout="@layout/view_plan_card"
+            android:tag="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
     </ViewFlipper>
 
     <LinearLayout
@@ -37,21 +50,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <Button
-            android:id="@+id/btnPrev"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="‹" />
 
-        <Space
-            android:layout_width="32dp"
-            android:layout_height="wrap_content"/>
 
         <Button
             android:id="@+id/btnNext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="›" />
+            android:text="›"
+            tools:layout_editor_absoluteX="290dp"
+            tools:layout_editor_absoluteY="355dp" />
 
+        <Space
+            android:layout_width="152dp"
+            android:layout_height="wrap_content" />
+
+
+        <Button
+            android:id="@+id/btnPrev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="‹"
+            tools:layout_editor_absoluteX="3dp"
+            tools:layout_editor_absoluteY="354dp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
