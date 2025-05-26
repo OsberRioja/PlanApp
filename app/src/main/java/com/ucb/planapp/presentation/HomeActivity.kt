@@ -1,5 +1,11 @@
 package com.ucb.planapp.presentation
 
+import android.content.ActivityNotFoundException
+import android.content.Intent
+import android.net.Uri
+import android.widget.ImageButton
+import android.widget.Toast
+import java.net.URLEncoder
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -50,5 +56,27 @@ class HomeActivity : AppCompatActivity() {
 
         btnNext.setOnClickListener { flipper.showNext() }
         btnPrev.setOnClickListener { flipper.showPrevious() }
+
+        val btnWhatsApp = findViewById<ImageButton>(R.id.btnWhatsApp)
+        btnWhatsApp.setOnClickListener {
+            // Texto a enviar
+            val message = "Hola, UCB mobile, preciso su ayuda"
+            // Codificar mensaje para URL
+            val encodedMessage = URLEncoder.encode(message, "UTF-8")
+            // Construir URI usando web.whatsapp.com (abre contactos)
+            val uri = Uri.parse("https://api.whatsapp.com/send?text=$encodedMessage")
+
+            // Intent para abrir WhatsApp
+            val sendIntent = Intent(Intent.ACTION_VIEW, uri)
+            sendIntent.setPackage("com.whatsapp")
+
+            try {
+                startActivity(sendIntent)
+            } catch (e: ActivityNotFoundException) {
+                // Si WhatsApp no está instalado, mostramos un Toast
+                Toast.makeText(this, "WhatsApp no está instalado.", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
+
 }

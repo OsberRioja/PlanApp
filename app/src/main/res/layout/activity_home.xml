@@ -61,7 +61,7 @@
             tools:layout_editor_absoluteY="355dp" />
 
         <Space
-            android:layout_width="152dp"
+            android:layout_width="185dp"
             android:layout_height="wrap_content" />
 
 
@@ -72,5 +72,18 @@
             android:text="‹"
             tools:layout_editor_absoluteX="3dp"
             tools:layout_editor_absoluteY="354dp" />
+
+        <ImageButton
+            android:id="@+id/btnWhatsApp"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="WhatsApp"
+            android:src="@drawable/ic_whatsapp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:layout_constraintTop_toBottomOf="@id/buttonsLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
